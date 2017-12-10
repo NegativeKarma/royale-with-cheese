@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   root controller: :landing, action: :index
   post '/search', to: 'landing#search'
 
-  resources :shopping_carts, only: :create
+  resources :shopping_carts, only: [:create, :update]
 end

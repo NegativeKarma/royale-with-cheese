@@ -8,6 +8,7 @@ Feature: User can add products to cart
       | title   | description   | price |
       | T-shirt | Blue t-shirt  | 50    |
       | Mug     | Nice mug      | 20    |
+      | Gloves  | Stay warm     | 25    |
 
   Scenario:
     When I visit the "Webshop" page
@@ -19,9 +20,9 @@ Feature: User can add products to cart
 
   Scenario: User can add a second product to the cart
     When I visit the "Webshop" page
-    Given there is a cart with cart item "T-shirt"
-    And I click on "Add to cart" on "Mug"
-    And the cart should contain "T-shirt"
+    Given there is a cart with cart item "Mug"
+    And I click on "Add to cart" on "Gloves"
     And the cart should contain "Mug"
+    And the cart should contain "Gloves"
     Then I should be redirected to the "Webshop" page
-    And I should see "Mug has been added to cart"
+    And I should see "Gloves has been added to cart"
