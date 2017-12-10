@@ -16,8 +16,7 @@ end
 
 Given("there is a cart with cart item {string}") do |product|
   steps %Q{
-       And I click on "Add to cart" on "#{product}"
-       Then a cart should be created for me
+    And I click on "Add to cart" on "#{product}"
   }
 end
 
