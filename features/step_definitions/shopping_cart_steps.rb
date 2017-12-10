@@ -16,8 +16,12 @@ end
 
 Given("there is a cart with cart item {string}") do |product|
   steps %Q{
-       And I click on "Add to cart" on "#{item}"
+       And I click on "Add to cart" on "#{product}"
        Then a cart should be created for me
        And the cart should contain "#{product}"
   }
+end
+
+Then("I should have two products in my cart") do
+  expect(@cart.shopping_cart_items.count).to eq 2
 end

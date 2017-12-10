@@ -3,6 +3,10 @@
 <% @products.each do |product| %>
 <div id="product-<%= product.id %>">
   <%= "#{product.title} - #{product.description} - #{product.price}" %><br/>
-    <%= link_to 'Add to cart', shopping_carts_path(product_id: product), method: :POST %><br/>
+    <% if @cart.nil? %>
+      <%= link_to 'Add to cart', shopping_carts_path(product_id: product), method: :POST %><br/>
+    <% else %>
+      <%= link_to 'Add to cart', shopping_carts_path(product_id: product), method: :PUT %><br/>
+    <% end %>
 </div>
 <% end %>
