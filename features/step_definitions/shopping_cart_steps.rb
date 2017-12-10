@@ -16,12 +16,8 @@ end
 
 Given("there is a cart with cart item {string}") do |product|
   steps %Q{
-       And I click on "Add to cart" on "#{product}"
+       And I click on "Add to cart" on "#{item}"
        Then a cart should be created for me
        And the cart should contain "#{product}"
   }
-end
-
-Then("show me the page") do
-  save_and_open_page
 end
