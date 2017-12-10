@@ -16,3 +16,12 @@ Feature: User can add products to cart
     And the cart should contain "T-shirt"
     Then I should be redirected to the "Webshop" page
     And I should see "T-shirt has been added to cart"
+
+  Scenario: User can add a second product to the cart
+    When I visit the "Webshop" page
+    Given there is a cart with cart item "T-shirt"
+    And I click on "Add to cart" on "Mug"
+    And the cart should contain "T-shirt"
+    And the cart should contain "Mug"
+    Then I should be redirected to the "Webshop" page
+    And I should see "Mug has been added to cart"

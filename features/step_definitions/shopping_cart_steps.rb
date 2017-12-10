@@ -14,7 +14,12 @@ Then("the cart should contain {string}") do |string|
   expect(@cart.shopping_cart_items.first.item).to eq @product
 end
 
-
+Given("there is a cart with cart item {string}") do |product|
+  steps %Q{
+       And I click on "Add to cart" on "#{product}"
+       Then a cart should be created for me
+  }
+end
 
 Then("show me the page") do
   save_and_open_page
