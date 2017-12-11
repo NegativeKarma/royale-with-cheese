@@ -22,8 +22,8 @@ Feature: User can add products to cart
     When I visit the "Webshop" page
     Given there is a cart with cart item "Mug"
     And I click on "Add to cart" on "Gloves"
-    # Then I should have two products in my cart
-    # Then the cart should contain "Mug"
-    # And the cart should contain "Gloves"
-    # Then I should be redirected to the "Webshop" page
-    # And I should see "Gloves has been added to cart"
+    Then I should have "2" products in my cart
+    Then the cart should contain "Mug"
+    And the cart should contain "Gloves"
+    Then I should be redirected to the "Webshop" page
+    And I should see "Gloves has been added to cart"

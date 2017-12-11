@@ -11,15 +11,16 @@ Then("a cart should be created for me") do
 end
 
 Then("the cart should contain {string}") do |string|
-  expect(@cart.shopping_cart_items.first.item).to eq @product
+  expect(@cart.shopping_cart_items.map(&:item)).to include @product
 end
 
 Given("there is a cart with cart item {string}") do |product|
   steps %Q{
     And I click on "Add to cart" on "#{product}"
+    Then a cart should be created for me
   }
 end
 
-Then("I should have two products in my cart") do
-  expect(@cart.shopping_cart_items.count).to eq 2
+Then("I should have {string} products in my cart") do |count|
+  expect(@cart.shopping_cart_items.count).to eq count.to_i
 end
