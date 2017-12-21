@@ -7,6 +7,7 @@ end
 
 gem 'stripe-rails'
 gem 'devise'
+gem 'jquery-rails'
 gem 'rails', '~> 5.1.4'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
