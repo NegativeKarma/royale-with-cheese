@@ -25,9 +25,9 @@ module RoyaleWithCheese
       generate.controller_specs false
     end
 
-    # config.stripe.secret_key = ENV['SECRET_KEY']
-    # config.stripe.publishable_key = ENV['PUBLISHABLE_KEY']
-    # config.stripe.endpoint = '/payment/stripe-integration'
+    config.stripe.secret_key = ENV['SECRET_KEY']
+    config.stripe.publishable_key = ENV['PUBLISHABLE_KEY']
+    config.stripe.endpoint = '/payment/stripe-integration'
     config.generators.system_tests = nil
   end
 end
