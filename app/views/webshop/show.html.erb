@@ -12,25 +12,25 @@
       <div><%= "#{product.title}" %></div>
       <div><%= "#{product.price}" %></div>
     </div> -->
-    <%= form_tag do %>
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%=ENV['PUBLISHABLE_KEY'] %>"
+    <%#= form_tag do %>
+      <!-- <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%#=ENV['PUBLISHABLE_KEY'] %>"
               data-description="Pay with stripe!"
               data-amount="1000"
-              data-locale="auto"></script>
-    <% end %>
+              data-locale="auto"></script> -->
+    <%# end %>
 </div>
 <% end %>
 
-<%#= form_tag do %>
-  <!-- <article>
+<%= form_tag do %>
+  <article>
     <label class="amount">
       <span>Amount: 10 sek</span>
     </label>
   </article>
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%#=ENV['PUBLISHABLE_KEY'] %>"
+          data-key="<%=ENV['PUBLISHABLE_KEY'] %>"
           data-description="Pay with stripe!"
           data-amount="1000"
-          data-locale="auto"></script> -->
-<%# end %>
+          data-locale="auto"></script>
+<% end %>
