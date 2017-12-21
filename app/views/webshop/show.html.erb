@@ -1,36 +1,42 @@
-<h1>Welcome to Webshop</h1>
-
-<% @products.each do |product| %>
-<div id="product-<%= product.id %>">
-  <%= "#{product.title} - #{product.description} - #{product.price}" %>
-  <% if session[:cart_id] %>
-    <%= link_to 'Add to cart', shopping_cart_path(session[:cart_id], product_id: product), method: :put %>
-  <% else %>
-    <%= link_to 'Add to cart', shopping_carts_path(product_id: product), method: :post %>
-  <% end %>
-    <!-- <div>
-      <div><%= "#{product.title}" %></div>
-      <div><%= "#{product.price}" %></div>
-    </div> -->
-    <%#= form_tag do %>
-      <!-- <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%#=ENV['PUBLISHABLE_KEY'] %>"
-              data-description="Pay with stripe!"
-              data-amount="1000"
-              data-locale="auto"></script> -->
-    <%# end %>
+<div class="header text-center text-warning">
+  <h1>Welcome to the Royale Shop</h1>
 </div>
-<% end %>
+
+<div class="products">
+  <% @products.each do |product| %>
+  <div id="product-<%= product.id %>">
+    <%= "#{product.title} - #{product.description} - #{product.price}" %>
+    <% if session[:cart_id] %>
+      <%= link_to 'Add to cart', shopping_cart_path(session[:cart_id], product_id: product), method: :put %>
+    <% else %>
+      <%= link_to 'Add to cart', shopping_carts_path(product_id: product), method: :post %>
+    <% end %>
+      <!-- <div>
+        <div><%= "#{product.title}" %></div>
+        <div><%= "#{product.price}" %></div>
+      </div> -->
+      <%#= form_tag do %>
+        <!-- <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%#=ENV['PUBLISHABLE_KEY'] %>"
+                data-description="Pay with stripe!"
+                data-amount="1000"
+                data-locale="auto"></script> -->
+      <%# end %>
+  </div>
+  <% end %>
+</div>
 
 <%= form_tag do %>
-  <article>
-    <label class="amount">
-      <span>Amount: 10 sek</span>
-    </label>
-  </article>
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%=ENV['PUBLISHABLE_KEY'] %>"
-          data-description="Pay with stripe!"
-          data-amount="1000"
-          data-locale="auto"></script>
+  <div class="stripe">
+    <article>
+      <label class="amount">
+        <span>Amount: 35 sek</span>
+      </label>
+    </article>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%=ENV['PUBLISHABLE_KEY'] %>"
+            data-description="Pay with stripe!"
+            data-amount="1000"
+            data-locale="auto"></script>
+  </div>
 <% end %>
