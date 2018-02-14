@@ -14,6 +14,10 @@ Then("I should see a list of {string}") do |element|
   expect(page).to have_element element
 end
 
+Then("show me the page") do
+  save_and_open_page
+end
+
 Then("I should be redirected to the {string} page") do |page_name|
   expect(page.current_path).to eq page_path_from(page_name)
 end
@@ -23,7 +27,7 @@ def page_path_from(page_name)
     when 'landing' then root_path
     when 'sign up' then new_user_registration_path
     when 'login' then new_user_session_path
-    when 'webshop' then webshop_show_path
+    when 'shop' then shop_show_path
     when 'shopping cart' then shopping_cart_show_path
   end
 end

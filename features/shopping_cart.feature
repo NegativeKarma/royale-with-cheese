@@ -11,19 +11,20 @@ Feature: User can add products to cart
       | Gloves  | Stay warm     | 25    |
 
   Scenario:
-    When I visit the "Webshop" page
+    When I visit the "Shop" page
+    Then show me the page
     And I click on "Add to cart" on "T-shirt"
     Then a cart should be created for me
     And the cart should contain "T-shirt"
-    Then I should be redirected to the "Webshop" page
+    Then I should be redirected to the "Shop" page
     And I should see "T-shirt has been added to cart"
 
   Scenario: User can add a second product to the cart
-    When I visit the "Webshop" page
+    When I visit the "Shop" page
     Given there is a cart with cart item "Mug"
     And I click on "Add to cart" on "Gloves"
     Then I should have "2" products in my cart
     Then the cart should contain "Mug"
     And the cart should contain "Gloves"
-    Then I should be redirected to the "Webshop" page
+    Then I should be redirected to the "Shop" page
     And I should see "Gloves has been added to cart"

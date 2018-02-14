@@ -5,7 +5,7 @@ class ShoppingCartsController < ApplicationController
     session[:cart_id] = @cart.id
     @cart.add(product, product.price)
 
-    redirect_to webshop_show_path, notice: "#{product.title} has been added to cart "
+    redirect_to shop_show_path, notice: "#{product.title} has been added to cart "
   end
 
   def update
@@ -15,6 +15,6 @@ class ShoppingCartsController < ApplicationController
     end
     @cart.add(product, product.price)
 
-    redirect_to webshop_show_path, notice: "#{product.title} has been added to cart "
+    redirect_to shop_show_path, notice: "#{product.title} has been added to cart "
   end
 end
