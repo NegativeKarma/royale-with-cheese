@@ -31,9 +31,9 @@ Run `rails s` and go to http://localhost:3000/
 You can use the app both from https://royale-with-cheese-wsix.herokuapp.com/ and
 http://localhost:3000/ if you're running it through `rails`.  
 When you're on the landing page you can search for a movie from this genres:  
-Action, Adventure, Animation, Comedy, Crime, Documentary, Drama, Family, Fantasy,
-History, Horror, Music, Mystery, Romance, Science Fiction, TV Movie, Thriller,
-War and Western.  
+**Action  Adventure  Animation  Comedy  Crime  Documentary  Drama  Family  Fantasy  
+History  Horror  Music  Mystery  Romance  Science Fiction  TV Movie  Thriller  
+War  Western**  
 You'll get the 5 most relevant movies as a result for searching any of these genre.
 
 You can register an account too.
