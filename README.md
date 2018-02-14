@@ -22,21 +22,21 @@ We also made our first user authentication process with Devise and partially imp
 * acts_as_shopping_cart
 
 ## Installation
-Download the ZIP file from this repo
-Unzip the file and then open it up via your terminal
-Run `bundle install`, after run `rails db:create db:migrate`
+Download the ZIP file from this repo.  
+Unzip the file and then open it up via your terminal.  
+Run `bundle install`, after run `rails db:create db:migrate`.  
 Run `rails s` and go to http://localhost:3000/
 
 ## How to use it
 You can use the app both from https://royale-with-cheese-wsix.herokuapp.com/ and
-http://localhost:3000/ if you're running it through `rails`.
-When you're on the landing page you can search for a movie from this genres:
+http://localhost:3000/ if you're running it through `rails`.  
+When you're on the landing page you can search for a movie from this genres:  
 Action, Adventure, Animation, Comedy, Crime, Documentary, Drama, Family, Fantasy,
 History, Horror, Music, Mystery, Romance, Science Fiction, TV Movie, Thriller,
-War and Western.
+War and Western.  
 You'll get the 5 most relevant movies as a result for searching any of these genre.
 
-You register an account too.
+You can register an account too.
 
 ## Testing
 * cucumber-rails
