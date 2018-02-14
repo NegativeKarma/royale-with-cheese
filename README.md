@@ -29,7 +29,7 @@ Run `rails s` and go to http://localhost:3000/
 
 ## How to use it
 You can use the app both from https://royale-with-cheese-wsix.herokuapp.com/ and
-http://localhost:3000/ if you're running it through `rails`.  
+http://localhost:3000/ if you're running it through `rails s`.  
 When you're on the landing page you can search for a movie from this genres:  
 **Action  
 Adventure  
