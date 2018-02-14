@@ -17,4 +17,8 @@ class ShoppingCartsController < ApplicationController
 
     redirect_to shop_show_path, notice: "#{product.title} has been added to cart "
   end
+
+  def show
+    @cart = Cart.find(params[:id])
+  end
 end
