@@ -22,8 +22,7 @@ Feature: Customer can see a summary of their products and total price
   Scenario: Customer can access cart page to see order summary and total price
     Given I visit the landing page
     And I click "Cart"
-    Then show me the page
     Then I should see "Cart Summary"
-    And I should see "Mug 20 $"
-    And I should see "Gloves 25 $"
+    And I should see "Mug 20.0 $"
+    And I should see "Gloves 25.0 $"
     And I should see "Total: 45.00 $"
